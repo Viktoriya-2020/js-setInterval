@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>das6.3</title>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+<style>
+#mecdiv{
+	
+	height:300px;
+	width:300px;
+}
+#b1{
+	color:red;
+}
+.d1{
+	position:relative;
+	height:50px;
+	width:50px;
+	float:left;
+	margin:10px;
+	
+}
+</style>
+</head>
+<body>
+<div id="dd"></div>
+<button id="b1" onclick="Start()">START</button>
+<div id="mecdiv">
+	
+</div>
+<script>
+var d = new Date();
+var t = d.toLocaleDateString()
+dd.innerHTML=t
+var Square=[
+	{	id:"d1",
+		color:"green",
+		text:"g",
+		interval:500,
+		},
+	{	id:"d2",
+		color:"yellow",
+		text:"y",
+		interval:1000,
+		},
+	{	id:"d3",
+		color:"red",
+		text:"r",
+		interval:1500,
+		},
+	{	id:"d4",
+		color:"blue",
+		text:"b",
+		interval:2000,
+		},
+]
+function Start(){
+	var i=0
+	
+	function Time(){
+		
+			if(i<4){
+			for(j=0;j<4;j++){
+				mecdiv.innerHTML+="<div class='d1'style='background:"+Square[i].color+"'>"+Square[i].text+"</div>"
+			}
+		mecdiv.innerHTML+="<br>"
+		}
+		i++
+	}
+	setInterval(function(){Time()},500)
+	
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body> 
+</html>
